@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lochana Ranatunga</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="module" src="js/bootstrap.bundle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .drawer {
+            height: auto !important;
+            max-height: fit-content !important;
+        }
+
+        @keyframes section-reveal {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        section {
+            scroll-margin-top: 80px;
+            animation: section-reveal linear both;
+            animation-timeline: view();
+            animation-range: entry 10% cover 30%;
+        }
+        body {
+            padding-top: 80px;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        .instrument-serif-regular {
+            font-family: "Instrument Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .instrument-serif-regular-italic {
+            font-family: "Instrument Serif", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .roboto {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        .oswald {
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #0d6efd;
+            color: #ffffff;
+        }
+
+        #home {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body class="color-scheme-light roboto"
+      data-bs-spy="scroll"
+      data-bs-target="#navbarNavAltMarkup"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      tabindex="0">
+
+<nav class="navbar navbar-expand-lg bg-1 fg-2 fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand me-5 fs-lg text" href="#home">
+            <span class="avatar me-4">
+                <img class="avatar-img" src="./images/LR.png" alt="profile-picture">
+            </span>
+            <span class="text-success oswald">LOCHANA RANATUNGA</span>
+        </a>
+        <button class="btn-icon navbar-toggler ms-auto" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <dialog class="drawer drawer-end h-auto" tabindex="-1" id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
+            <div class="drawer-body h-auto">
+                <div class="nav nav-pills navbar-nav flex-column flex-lg-row ms-lg-auto gap-2 gap-lg-1">
+                    <a class="nav-link text-center text-lg-start" href="#home">Home</a>
+                    <a class="nav-link text-center text-lg-start" href="#skills">Skills</a>
+                    <a class="nav-link text-center text-lg-start" href="#projects">Projects</a>
+                    <a class="nav-link text-center text-lg-start" href="#contact">Contact</a>
+                </div>
+            </div>
+        </dialog>
+    </div>
+</nav>
+
+<section id="home" class="w-100 p-5">
+    <div>
+        <h1 class="text-center mb-5 instrument-serif-regular fs-5xl text">Welcome to Lochana's 🏠 on the 🌐</h1>
+        <p class="mt-5 p-5 mx-8 fs-lg text-center mx-10">
+            Hi! I'm Lochana Ranatunga, a Mathematics + Statistics + Computer Science undergraduate, at Faculty of Applied Sciences, University of Sri Jayewardenepura.
+            Take a look at what I do, what I've brought to life, and what I'm currently building.
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="mb-5 w-100 p-5">
+    <div>
+        <h1 class="text-center mb-5 instrument-serif-regular fs-5xl text">Skills</h1>
+        <div class="accordion theme-primary">
+            <details class="accordion-item" name="accordionExample">
+                <summary class="accordion-header">
+                    C Programming
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                    Solid foundation in C software development, highlighting strict pointer control, memory leakage prevention, and algorithm design. Experienced in developing and debugging command-line utilities.
+                </div>
+            </details>
+            <details class="accordion-item" name="accordionExample">
+                <summary class="accordion-header">
+                    Python Programming
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                    Proficient in Python for data processing, data analysis, and workflow automation. Skilled in utilizing libraries like Pandas and NumPy to transform complex datasets, automate repetitive tasks, and clean messy real-world data.
+                </div>
+            </details>
+            <details class="accordion-item" name="accordionExample">
+                <summary class="accordion-header">
+                    Data Analysis
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                    Proficient in transforming raw business data into actionable insights using advanced Excel, Minitab, R and Python.
+                </div>
+            </details>
+            <details class="accordion-item" name="accordionExample">
+                <summary class="accordion-header">
+                    Full-Stack Web Development
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                    Proficient in constructing complete web applications using HTML5, CSS3, JavaScript, and server-side PHP. Experienced in building database-driven features, managing backend routing, and delivering fast, user-friendly interfaces.
+                </div>
+            </details>
+            <details class="accordion-item" name="accordionExample">
+                <summary class="accordion-header">
+                    Mathematics
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-body">
+                    Specialized in the mathematical principles underlying computer science, data architecture, and cryptography. Proficient in leveraging matrix operations, graph theory, combinatorics, and discrete structures for efficient algorithmic design.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="mb-5 w-100 p-5">
+    <div>
+        <h1 class="text-center mb-5 instrument-serif-regular fs-5xl text">Projects</h1>
+        <div class="container my-4">
+            <div class="column mx-auto p-5">
+                <div class="row justify-content-center p-5">
+                    <section class="card m-5 bg-subtle-success hover-lift" style="max-width: 320px">
+                        <div class="card-body">
+                            <h4 class="card-title instrument-serif-regular-italic fs-2xl text">AnthroCalc</h4>
+                            <p class="card-text">A command-line tool to calculate and classify body composition related health metrics using anthropometric measurements.</p>
+                            <a href="https://github.com/lochanalmr/anthro-calc" class="btn-solid theme-success hover-lift">View Code</a>
+                        </div>
+                    </section>
+                    <section class="card m-5 bg-subtle-primary hover-lift" style="max-width: 320px">
+                        <div class="card-body">
+                            <h4 class="card-title instrument-serif-regular-italic fs-2xl text">Smart Hospital Patient and Resource Allocation System</h4>
+                            <p class="card-text">A hospital patient and resource allocation system built in C, that can register patients, allocate beds, display bills for a selected patient and view reports and analytics from the entered data.</p>
+                            <a href="https://github.com/lochanalmr/smart-hospital-patient-and-resource-allocation-system" class="btn-solid theme-primary hover-lift">View Code</a>
+                        </div>
+                    </section>
+                    <section class="card m-5 bg-subtle-accent hover-lift" style="max-width: 320px">
+                        <div class="card-body">
+                            <h4 class="card-title instrument-serif-regular-italic fs-2xl text">Movie Booking System</h4>
+                            <p class="card-text">This program is a command-line program built in C, that can be used in a theater to manage seat bookings and ticket pricing for a set of movie showtimes.</p>
+                            <a href="https://github.com/CSC1031GroupProject/movie-booking-system-group-project-csc1031" class="btn-solid theme-accent hover-lift">View Code</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="mb-5 w-100 p-5">
+    <div>
+        <h1 class="text-center mb-5 instrument-serif-regular fs-5xl text">Contact</h1>
+        <div class="p-5">
+            <label for="nameInput" class="form-label">Name</label>
+            <label class="form-control form-adorn form-adorn-end">
+                <div class="form-adorn-icon" aria-hidden="true">
+                    <svg class="bi" width="16" height="16"><use href="#envelope" /></svg>
+                </div>
+                <input type="text" class="form-ghost" id="nameInput" placeholder="John Doe">
+            </label>
+        </div>
+        <div class="form-field p-5">
+            <label for="fieldText" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="fieldText" placeholder="name@example.com">
+            <div class="form-text">
+                We’ll never share your name and email with anyone else.
+            </div>
+        </div>
+        <div class="form-field p-5">
+            <label for="fieldTextarea" class="form-label">Message</label>
+            <textarea class="form-control" id="fieldTextarea" rows="3"></textarea>
+            <div class="form-text">
+                Include all relevant details.
+            </div>
+        </div>
+        <div class="p-5">
+            <button type="button" class="btn-solid theme-primary">Submit</button>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-3 text-center text-lg-start mt-5 h-10 oswald">
+    <div class="text-center p-3" style="background-color: lightgrey" height="40">
+        © 2026 Lochana Ranatunga. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
