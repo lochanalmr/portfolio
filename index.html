@@ -419,35 +419,42 @@
 </section>
 
 <section id="contact" class="mb-5 w-100 p-5">
-    <div>
+    <form action="https://formspree.io/f/moejralo" method="POST">
         <h1 class="text-center mb-5 instrument-serif-regular fs-5xl text">Contact</h1>
+
         <div class="p-5">
             <label for="nameInput" class="form-label">Name</label>
             <label class="form-control form-adorn form-adorn-end">
                 <div class="form-adorn-icon" aria-hidden="true">
                     <svg class="bi" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
                 </div>
-                <input type="text" class="form-ghost" id="nameInput" placeholder="John Doe">
+                <input type="text" class="form-ghost" id="nameInput" name="name" placeholder="John Doe" required>
             </label>
         </div>
+
         <div class="form-field p-5">
             <label for="fieldText" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="fieldText" placeholder="name@example.com">
+            <input type="email" class="form-control" id="fieldText" name="email" placeholder="name@example.com" required>
             <div class="form-text">
                 We’ll never share your name and email with anyone else.
             </div>
         </div>
+
         <div class="form-field p-5">
             <label for="fieldTextarea" class="form-label">Message</label>
-            <textarea class="form-control" id="fieldTextarea" rows="3"></textarea>
+            <textarea class="form-control" id="fieldTextarea" name="message" rows="3" required></textarea>
             <div class="form-text">
                 Include all relevant details.
             </div>
         </div>
+
+        <!-- Spam prevention honeypot field -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none !important">
+
         <div class="p-5">
-            <button type="button" class="btn-solid theme-primary">Submit</button>
+            <button type="submit" class="btn-solid theme-primary">Submit</button>
         </div>
-    </div>
+    </form>
 </section>
 
 <section id="connect" class="w-100 py-5">
